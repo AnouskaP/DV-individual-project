@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Comparison Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <style>
+   
+        #chart-container {
+            width: 1100px;
+            height: 500px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .line {
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        .overlay {
+            fill: none;
+            pointer-events: all;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+    <h1> COMPARISON OF CLOSING PRICE FOR TWO SELECTED COMPANIES</h1></div>
+    <!-- Dropdown list for Company 1 -->
+    <div class="select-container">
+        <label for="csv-select-1">Select company 1:</label>
+        <select id="csv-select-1">
+        <option value="AAPL.csv">Apple Inc.</option>
+        <option value="AXP.csv">American Express</option>
+        <option value="BA.csv">Boeing</option>
+        <option value="CAT.csv">Caterpillar</option>
+        <option value="CSCO.csv">Cisco Systems</option>
+        <option value="DWDP.csv">DWDP</option>
+        <option value="CVX.csv">Chevron</option>
+        <option value="DIS.csv">Walt Disney</option>
+        <option value="GS.csv">Goldman Sachs</option>
+        <option value="HD.csv">Home Depot</option>
+        <option value="IBM.csv">IBM</option>
+        <option value="INTC.csv">Intel</option>
+        <option value="JNJ.csv">Johnson & Johnson</option>
+        <option value="JPM.csv">JPMorgan Chase</option>
+        <option value="KO.csv">Coca-Cola</option>
+        <option value="MCD.csv">McDonald's</option>
+        <option value="MMM.csv">3M</option>
+        <option value="MRK.csv">Merck & Co.</option>
+        <option value="MSFT.csv">Microsoft</option>
+        <option value="NKE.csv">Nike</option>
+        <option value="PFE.csv">Pfizer</option>
+        <option value="PG.csv">Procter & Gamble</option>
+        <option value="TRV.csv">Travelers</option>
+        <option value="UNH.csv">UnitedHealth Group</option>
+        <option value="UTX.csv">UTX</option>
+        <option value="V.csv">Visa</option>
+        <option value="VZ.csv">Verizon Communications</option>
+        <option value="WBA.csv">Walgreens Boots Alliance</option>
+        <option value="WMT.csv">Walmart</option>
+        <option value="XOM.csv">Exxon Mobile</option>
+    </select>
+ 
+        <label for="csv-select-2">Select company 2:</label>
+        <select id="csv-select-2">
+        <option value="AAPL.csv">Apple Inc.</option>
+        <option value="AXP.csv">American Express</option>
+        <option value="BA.csv">Boeing</option>
+        <option value="CAT.csv">Caterpillar</option>
+        <option value="CSCO.csv">Cisco Systems</option>
+        <option value="DWDP.csv">DWDP</option>
+        <option value="CVX.csv">Chevron</option>
+        <option value="DIS.csv">Walt Disney</option>
+        <option value="GS.csv">Goldman Sachs</option>
+        <option value="HD.csv">Home Depot</option>
+        <option value="IBM.csv">IBM</option>
+        <option value="INTC.csv">Intel</option>
+        <option value="JNJ.csv">Johnson & Johnson</option>
+        <option value="JPM.csv">JPMorgan Chase</option>
+        <option value="KO.csv">Coca-Cola</option>
+        <option value="MCD.csv">McDonald's</option>
+        <option value="MMM.csv">3M</option>
+        <option value="MRK.csv">Merck & Co.</option>
+        <option value="MSFT.csv">Microsoft</option>
+        <option value="NKE.csv">Nike</option>
+        <option value="PFE.csv">Pfizer</option>
+        <option value="PG.csv">Procter & Gamble</option>
+        <option value="TRV.csv">Travelers</option>
+        <option value="UNH.csv">UnitedHealth Group</option>
+        <option value="UTX.csv">UTX</option>
+        <option value="V.csv">Visa</option>
+        <option value="VZ.csv">Verizon Communications</option>
+        <option value="WBA.csv">Walgreens Boots Alliance</option>
+        <option value="WMT.csv">Walmart</option>
+        <option value="XOM.csv">Exxon Mobile</option>
+    </select>
+    </div>
+
+    <!-- Chart container -->
+    <div id="chart-container"></div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>

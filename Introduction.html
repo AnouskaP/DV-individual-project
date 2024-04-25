@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7; 
+            margin: 20px; 
+            padding: 20px; 
+        }
+        h1 {
+            color: #333; 
+        }
+        h3 {
+            background-color: #ddd; 
+            padding: 10px; 
+        }
+        p {
+            margin-bottom: 20px; 
+        }
+        ul {
+            margin-bottom: 10px; 
+        }
+        #formula {
+            margin-left: 20px;
+        }
+        a {
+            color: blue; 
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>7CCSMSDV Data Visualisation Project 2024</h1>
+
+    <h3>Introduction</h3>
+    <p> 
+        These visualisations serve to answer Research Question 3 of part 3 of the Data Visualisation exam:
+        <br>
+        <b><i>Analyse performances of stock prices over time. Are there any detectable trends?</i></b><br>
+        There are 3 visualizations which can be accessed through the top navigation bar:
+        <ul>
+            <li>Line Chart</li>
+            <li>A comparison line chart</li>
+            <li>Candlestick chart</li>
+        </ul>
+    </p>
+
+    <h3>Key Information</h3>
+    <p>Development of the visualisations was multi-faceted and all the visualisations use:
+        <ul>
+            <li>HTML and JavaScript</li>
+            <li>D3.js v.4 and v.5 via: <a href="https://d3js.org/">https://d3js.org/</a></li>
+            <li>CSS for formatting</li>
+        </ul>
+        As an open source project each visualisation is based on other developers code as follows:
+        <br>
+        Line chart:
+        Based on code by DataVizDad sourced at: <a href="https://github.com/datavizdad/d3areachartseries/tree/main/part%25203">Link</a>
+        <br>
+        The comparison line chart:
+        Based on code sourced at: <a href="https://d3-graph-gallery.com/graph/line_basic.html">https://d3-graph-gallery.com/graph/line_basic.html</a>
+        <br>
+        Candlestick chart:
+        Based on code developed by Andre Dumas and sourced at: <a href="https://gist.github.com/andredumas/27c4a333b0e0813e093d">https://gist.github.com/andredumas/27c4a333b0e0813e093d</a>
+    </p>
+
+    <p>
+        <h3>Data Source</h3>
+        Data for visualization of all the three graphs is the same and sourced from Kaggle.
+        <br>
+        Link: <a href="https://www.kaggle.com/datasets/timoboz/stock-data-dow-jones/data">https://www.kaggle.com/datasets/timoboz/stock-data-dow-jones/data</a>
+    </p>
+
+    <p>
+        <h3>Calculation for Top Performing Companies</h3>
+        <li>The calculation focuses on the opening and closing prices of the stock for the first and last days of the specified period.</li>
+        <li>Percentage Change Calculation: The percentage change is calculated using the formula:
+            <div id="formula">
+                \[
+                \text{Percentage Change} = \left( \frac{\text{Closing Price} - \text{Opening Price}}{\text{Opening Price}} \right) \times 100
+                \]
+            </div>
+        </li>
+        <li>Aggregate Calculation: For each company, the percentage changes calculated for individual periods (e.g., months) are aggregated to determine the overall performance over the specified time frame. I used Python to perform these calculations.</li>
+    </p>
+</body>
+</html>

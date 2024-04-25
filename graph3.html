@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Candlestick chart</title>
+    <style>
+        h1 {
+            margin-top: 20px;
+            align-items: center;
+            color: blue;
+        }
+
+        
+    </style>
+</head>
+<link rel="style" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<body>
+    <h1>CANDLESTICK CHART FOR THE TOP PERFORMING COMPANIES</h1>
+    
+    <div id="select-container5">
+        <label for="csv-select5">Select A COMPANY:</label>
+        <select id="csv-select5">
+            <option value="INTC.csv">INTC</option>
+            <option value="BA.csv">BA</option>
+            <option value="KO.csv">KO</option>
+            <option value="MMM.csv">MMM</option>
+            <option value="CSCO.csv">CSCO</option> 
+        </select>
+    </div>
+
+    <svg id="container"></svg>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="script3.js"></script>
+</body>
+</html>

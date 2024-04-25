@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Line chart</title>
+  <style>
+    rect {
+      pointer-events: all;
+      fill-opacity: 0;
+      stroke-opacity: 0;
+      z-index: 1;
+    }
+
+    .tooltip {
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(11, 40, 65);
+    color: white;
+    border: 0px solid white;
+    border-radius: 0px;
+    display: none;
+    opacity: .75;
+    font-size: 14px;
+  }
+
+  .tooltip-line {
+  stroke-opacity: 0.5;
+} 
+  </style>
+ </head>
+
+<body>
+
+    <h1> LINE GRAPH FOR CLOSING PRICE</h1>
+    <div class="select-container">
+        <label for="csv-select">Select a company to visualise it's Stock:</label>
+    <select id="csv-select">
+        <option value="AAPL.csv">Apple Inc.</option>
+        <option value="AXP.csv">American Express</option>
+        <option value="BA.csv">Boeing</option>
+        <option value="CAT.csv">Caterpillar</option>
+        <option value="CSCO.csv">Cisco Systems</option>
+        <option value="DWDP.csv">DWDP</option>
+        <option value="CVX.csv">Chevron</option>
+        <option value="DIS.csv">Walt Disney</option>
+        <option value="GS.csv">Goldman Sachs</option>
+        <option value="HD.csv">Home Depot</option>
+        <option value="IBM.csv">IBM</option>
+        <option value="INTC.csv">Intel</option>
+        <option value="JNJ.csv">Johnson & Johnson</option>
+        <option value="JPM.csv">JPMorgan Chase</option>
+        <option value="KO.csv">Coca-Cola</option>
+        <option value="MCD.csv">McDonald's</option>
+        <option value="MMM.csv">3M</option>
+        <option value="MRK.csv">Merck & Co.</option>
+        <option value="MSFT.csv">Microsoft</option>
+        <option value="NKE.csv">Nike</option>
+        <option value="PFE.csv">Pfizer</option>
+        <option value="PG.csv">Procter & Gamble</option>
+        <option value="TRV.csv">Travelers</option>
+        <option value="UNH.csv">UnitedHealth Group</option>
+        <option value="UTX.csv">UTX</option>
+        <option value="V.csv">Visa</option>
+        <option value="VZ.csv">Verizon Communications</option>
+        <option value="WBA.csv">Walgreens Boots Alliance</option>
+        <option value="WMT.csv">Walmart</option>
+        <option value="XOM.csv">Exxon Mobile</option>
+    </select>
+    </div>
+
+  <div id="chart-container"></div>
+  <div id="slider-range"></div>
+ 
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+  
+  <script src="js12.js"></script>
+</body>
+
+</html>
